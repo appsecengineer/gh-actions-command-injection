@@ -11,7 +11,10 @@ env:
   API_TOKEN: ${{secrets.API_TOKEN}}
 jobs:
   vuln_job:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
 
     steps:
       - uses: actions/checkout@v2
